@@ -1,0 +1,1 @@
+echo 'create Review place_id=" b6a85ce4-e14b-495b-9969-c02902f975cc" user_id="ff4da0cc-816d-44a4-aa46-02081cbd2ac8" text="Amazing_place,_huge_kitchen"' | HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db ./console.py 
