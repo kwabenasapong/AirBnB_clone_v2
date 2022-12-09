@@ -1,8 +1,8 @@
 # HBNB
 
-### fork repo to work on group project..
+### We fork this repo to work on group project..
 
-This is the console /command interpreter for the Holberton Airbnb clone project. The console can be used to store objects in and retrieve objects from a JSON.
+This is the console /command interpreter for the ALX Airbnb clone project. The console can be used to store objects in and retrieve objects from a JSON.
 
 ### Supported classes:
 * BaseModel
@@ -53,4 +53,4 @@ Ex:
 
 Additionally, the console supports `<class name>.<command>(<parameters>)` syntax.
 Ex:
-`City.show(my_city_id)`
+`City.show(my_city_id)
