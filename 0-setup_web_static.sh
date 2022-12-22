@@ -8,10 +8,9 @@ sudo apt install nginx -y
 # Create necessary directories
 sudo mkdir -p /data/web_static/shared/
 sudo mkdir -p /data/web_static/releases/test/
-sudo touch '/data/web_static/releases/test/index.html'
 
 # Create index.html
-echo "it works" | sudo tee /data/web_static/releases/test/index.html
+echo "This is $(hostname) an ALX student server" | sudo tee /data/web_static/releases/test/index.html
 
 # Create symlinks
 sudo rm -rf /data/web_static/current
