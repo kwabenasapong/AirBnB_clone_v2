@@ -10,13 +10,13 @@ sudo mkdir -p /data/web_static/shared/
 sudo mkdir -p /data/web_static/releases/test/
 
 # Create index.html
-echo "This is $(hostname) an ALX student server" | sudo tee /data/web_static/releases/test/index.html
+sudo echo "This is $(hostname) an ALX student server" | sudo tee /data/web_static/releases/test/index.html
 
 # Create symlinks
 sudo rm -rf /data/web_static/current
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
-#sudo rm -rf /etc/nginx/sites-enabled
-#sudo ln -sf /etc/nginx/sites-available/ /etc/nginx/sites-enabled
+sudo rm -rf /etc/nginx/sites-enabled
+sudo ln -sf /etc/nginx/sites-available/ /etc/nginx/sites-enabled
 
 # Change ownership
 sudo chown -hR ubuntu:ubuntu /data/
