@@ -2,8 +2,8 @@
 # configuring my servers as web servers
 
 # Update and install nginx
-sudo apt update -y
-sudo apt install nginx -y
+sudo apt-get update -y
+sudo apt-get install nginx -y
 
 # Create necessary directories
 sudo mkdir -p /data/web_static/shared/
