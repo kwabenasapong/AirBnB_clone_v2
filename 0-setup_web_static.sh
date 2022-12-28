@@ -23,7 +23,7 @@ sudo chown -hR ubuntu:ubuntu /data/
 
 # configure Nginx Servers
 replace="server_name _;"
-new="server_name _;\n\n\tlocation \/hbnb_static\/ \{\n\t\talias \/data\/web_static\/current\/;\n\t\}"
+new="server_name _;\n\n\tlocation \/hbnb_static \{\n\t\talias \/data\/web_static\/current\/;\n\t\}"
 sudo sed -i "s/$replace/$new/" /etc/nginx/sites-enabled/default
 
 # Restart Nginx
