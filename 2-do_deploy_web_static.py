@@ -28,11 +28,13 @@ def do_deploy(archive_path):
     folder = filename.split(".")[0]
     put(archive_path, "/tmp/")
     with cd("/data/web_static/releases/"):
-        run("mkdir " + folder)
+        run("mkdir -p " + folder)
     with cd("/tmp/"):
         run("tar -xzf " + filename + " -C /data/web_static/releases/" + folder)
     run("rm /tmp/" + filename)
     with cd("/data/web_static/releases/"):
+        run("mv " + folder + "/web_static/* " + folder)
+        run("rm -rf ")
         run("rm -rf current")
-        run("ln -s " + folder + " current")
+        run("ln -s " + folder + " /data/web_static/current")
     return True
