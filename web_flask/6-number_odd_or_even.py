@@ -52,18 +52,12 @@ def number_template(nummer):
         return render_template('no_found.html'), 404
 
 
-@app.route('/number_odd_or_even/<nummer>', strict_slashes=False)
-def number_even(nummer):
-    """ Print a template witheven or odd """
-    if nummer.isdigit():
-        if (int(nummer) % 2) == 0:
-            return render_template('6-number_odd_or_even.html',
-                                   name=nummer, kind="even")
-        else:
-            return render_template('6-number_odd_or_even.html',
-                                   name=nummer, kind="odd")
-    else:
-        return render_template('no_found.html'), 404
+@app.route("/number_odd_or_even/<int:n>", strict_slashes=False)
+def number_odd_or_even(n):
+    """Displays an HTML page only if <n> is an integer.
+            States whether <n> is odd or even in the body.
+    """
+    return render_template("6-number_odd_or_even.html", n=n)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
