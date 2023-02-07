@@ -1,48 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" type="text/css" href="static/styles/4-common.css">
-    <link rel="stylesheet" type="text/css" href="static/styles/3-header.css">
-    <link rel="stylesheet" type="text/css" href="static/styles/3-footer.css">
-    <link rel="stylesheet" type="text/css" href="static/styles/6-filters.css">
-    <link rel="icon" href="static/images/icon.png" />
-    <title>HBnB</title>
-  </head>
-  <body>
-    <header>
-      <div class="logo"></div>
-    </header>
-    <div class="container">
-      <section class="filters">
-	<div class="locations">
-	    <h3>States</h3>
-	      <h4>&nbsp;</h4>
-	        <div class="popover">
-		    <ul>
-		    {% for state in l_state | sort(attribute='name') %}
-			<li><h3>{{ state.name }}</h3></li>
-			{% for city in state.cities | sort(attribute='name') %}
-			<li><h4>{{ city.name }}</h4></li>
-			{% endfor %}
-		    {% endfor %}
-		</div>
-	</div>
-	<div class="amenities">
-	    <h3>Amenities</h3>
-	      <h4>&nbsp;</h4>
-	        <div class="popover">
-		      <ul>
-			{% for amenity in l_amenity | sort(attribute='name') %}
-			<li>{{ amenity.name }}</li>
-			{% endfor %}
-		      </ul>
-		</div>
-	</div>
-	<button type="button">Search</button>
-      </section>
-    </div>
-    <footer>
-      <p>Holberton School</p>
-    </footer>
-  </body>
+    <head>
+        <TITLE>HBNB</TITLE>
+    </head>
+    <body>
+    {% if n is even %}
+        <h1>Number: {{ n }} is even</h1>
+    {% else %}
+        <h1>Number: {{ n }} is odd</h1>
+    {% endif %}
+    </body>
 </html>
